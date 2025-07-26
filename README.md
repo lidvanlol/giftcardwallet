@@ -1,97 +1,259 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Gift Card Wallet 📱
 
-# Getting Started
+A React Native mobile application for managing gift cards. Keep track of your gift card balances, expiration dates, and never lose another gift card again.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 🎯 Why This Project?
 
-## Step 1: Start Metro
+### Problem
+- **Lost Gift Cards**: Physical gift cards get lost, damaged, or forgotten
+- **Expired Balances**: No easy way to track expiration dates
+- **Scattered Information**: Gift card details are stored in various places
+- **No Central Management**: No single app to manage all gift cards
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### Solution
+- **Digital Storage**: Store all gift card information securely on your device
+- **Balance Tracking**: Keep track of remaining balances
+- **Expiration Alerts**: Never miss an expiration date
+- **Easy Access**: All your gift cards in one place
+- **Offline First**: Works without internet connection
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 🏗️ Architecture
 
-```sh
-# Using npm
-npm start
+### Tech Stack
+- **React Native 0.80.1** - Cross-platform mobile development
+- **TypeScript** - Type safety and better developer experience
+- **Redux Toolkit** - State management
+- **React Navigation** - Screen navigation
+- **AsyncStorage** - Local data persistence
 
-# OR using Yarn
-yarn start
+### Project Structure
+```
+giftcardwallet/
+├── components/          # Reusable UI components
+├── screens/            # Screen components
+├── navigation/         # Navigation configuration
+├── redux/             # State management
+├── utils/             # Utility functions
+├── theme/             # Design system
+├── types/             # TypeScript type definitions
+├── __tests__/         # Jest unit tests
+├── e2e/              # Detox end-to-end tests
+└── assets/           # Images, fonts, etc.
 ```
 
-## Step 2: Build and run your app
+## 📚 Major Libraries Used
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### Core Framework
+- **React Native 0.80.1** - Mobile app framework
+- **TypeScript 5.0+** - Type-safe JavaScript
 
-### Android
+### State Management
+- **@reduxjs/toolkit** - Redux state management
+- **react-redux** - React bindings for Redux
 
-```sh
-# Using npm
-npm run android
+### Navigation
+- **@react-navigation/native** - Navigation library
+- **@react-navigation/stack** - Stack navigator
+- **react-native-screens** - Native navigation primitives
+- **react-native-safe-area-context** - Safe area handling
 
-# OR using Yarn
-yarn android
+### UI & Styling
+- **react-native-vector-icons** - Icon library (MaterialCommunityIcons)
+- **react-native-gesture-handler** - Touch handling
+- **react-native-reanimated** - Animation library
+
+### Data Persistence
+- **@react-native-async-storage/async-storage** - Local storage
+
+### Development Tools
+- **Metro** - JavaScript bundler
+- **Babel** - JavaScript compiler
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
+
+### Testing
+- **Jest** - Unit testing framework
+- **@testing-library/react-native** - React Native testing utilities
+- **Detox** - End-to-end testing
+
+### Build & Development
+- **React Native CLI** - Development tools
+- **CocoaPods** - iOS dependency management
+- **Gradle** - Android build system
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- React Native CLI
+- Xcode (for iOS development)
+- Android Studio (for Android development)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd giftcardwallet
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **iOS Setup**
+   ```bash
+   cd ios
+   pod install
+   cd ..
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm start
+   ```
+
+5. **Run on iOS**
+   ```bash
+   npm run ios
+   ```
+
+6. **Run on Android**
+   ```bash
+   npm run android
+   ```
+
+   7. **Before pushing to github do validation this will check for lint,format,tsc errors**
+   ```bash
+   npm run validate
+   ```
+
+
+## 🧪 Testing
+
+### Unit Tests
+```bash
+# Run all unit tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
 ```
+
+### E2E Tests (Detox)
+```bash
+# Build for testing
+npm run detox:build
+
+# Run E2E tests
+npm run detox:test
+
+# Run simple E2E tests
+npm run test:e2e:simple
+```
+
+## 📱 Features
+
+### Core Features
+- ✅ **Add Gift Cards** - Store card details, amounts, and expiration dates
+- ✅ **View Card List** - See all your gift cards in one place
+- ✅ **Card Details** - View detailed information for each card
+- ✅ **Edit Cards** - Update card information
+- ✅ **Delete Cards** - Remove cards you no longer have
+- ✅ **Offline Support** - Works without internet connection
+
+### UI Features
+- ✅ **Modern Design** - Clean, intuitive interface
+- ✅ **Dark/Light Theme** - Adaptive theming
+- ✅ **Responsive Layout** - Works on different screen sizes
+- ✅ **Loading States** - Smooth user experience
+- ✅ **Error Handling** - Graceful error management
+
+### Data Management
+- ✅ **Local Storage** - Data stored securely on device
+- ✅ **Data Validation** - Input validation and error messages
+- ✅ **Data Persistence** - Data survives app restarts
+
+## 🎨 Design System
+
+### Colors
+- **Primary**: `#6200ee` (Purple)
+- **Background**: `#f5f5f5` (Light Gray)
+- **Surface**: `#ffffff` (White)
+- **Error**: `#b00020` (Red)
+
+### Typography
+- **Headline Large**: 32px, Bold
+- **Headline Medium**: 24px, SemiBold
+- **Body Large**: 16px, Regular
+- **Body Medium**: 14px, Regular
+- **Body Small**: 12px, Regular
+
+### Components
+- **Button** - Primary, secondary, and icon buttons
+- **TextInput** - Form inputs with validation
+- **Card** - Gift card display component
+- **Header** - Navigation header with back button
+- **EmptyState** - Empty state messaging
+
+## 🔧 Development
+
+### Code Style
+- **TypeScript** for type safety
+- **ESLint** for code quality
+- **Prettier** for code formatting
+- **Component-based architecture**
+
+### State Management
+- **Redux Toolkit** for global state
+- **Local component state** for UI state
+- **AsyncStorage** for persistence
+
+### Navigation
+- **Stack Navigator** for screen navigation
+- **Type-safe navigation** with TypeScript
+- **Header customization** per screen
+
+## 📦 Build & Deploy
 
 ### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+# Build for iOS
+cd ios
+xcodebuild -workspace giftcardwallet.xcworkspace -scheme giftcardwallet -configuration Release
 ```
 
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
+### Android
+```bash
+# Build for Android
+cd android
+./gradlew assembleRelease
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## 🤝 Contributing
 
-```sh
-# Using npm
-npm run ios
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Ensure all tests pass
+6. Submit a pull request
 
-# OR using Yarn
-yarn ios
-```
+## 📄 License
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🙏 Acknowledgments
 
-## Step 3: Modify your app
+- **React Native** community for the amazing framework
+- **Material Design** for design inspiration
+- **React Navigation** for excellent navigation library
+- **Redux Toolkit** for simplified state management
 
-Now that you have successfully run the app, let's make changes!
+---
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Built with ❤️ using React Native**

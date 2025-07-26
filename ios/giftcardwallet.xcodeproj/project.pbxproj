@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-giftcardwallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-giftcardwallet.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		634EA8E5AB64493EA8E87726 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B1FCFAA59D5434F884A56FE /* Roboto-Medium.ttf */; };
+		6BD4DF17CC3E403AA8F24A66 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D839D367715242EF8C9AFD97 /* Roboto-Bold.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8E16264D91B6DBB753D7666F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		93144EE06FF0418990757997 /* Roboto-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4ACDB7265AF246ED924241EF /* Roboto-SemiBold.ttf */; };
+		F28A2D0F304149FE860512B0 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E8C5CDD9B2149F180AA6174 /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,11 +23,15 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = giftcardwallet/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = giftcardwallet/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = giftcardwallet/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2B1FCFAA59D5434F884A56FE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-giftcardwallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftcardwallet.debug.xcconfig"; path = "Target Support Files/Pods-giftcardwallet/Pods-giftcardwallet.debug.xcconfig"; sourceTree = "<group>"; };
+		4ACDB7265AF246ED924241EF /* Roboto-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-SemiBold.ttf"; path = "../assets/fonts/Roboto-SemiBold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-giftcardwallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftcardwallet.release.xcconfig"; path = "Target Support Files/Pods-giftcardwallet/Pods-giftcardwallet.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-giftcardwallet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-giftcardwallet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = giftcardwallet/AppDelegate.swift; sourceTree = "<group>"; };
+		7E8C5CDD9B2149F180AA6174 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = giftcardwallet/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D839D367715242EF8C9AFD97 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -75,6 +83,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				D94D6826A3774FCE9BACF68A /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -96,6 +105,18 @@
 				5709B34CF0A7D63546082F79 /* Pods-giftcardwallet.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D94D6826A3774FCE9BACF68A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D839D367715242EF8C9AFD97 /* Roboto-Bold.ttf */,
+				2B1FCFAA59D5434F884A56FE /* Roboto-Medium.ttf */,
+				7E8C5CDD9B2149F180AA6174 /* Roboto-Regular.ttf */,
+				4ACDB7265AF246ED924241EF /* Roboto-SemiBold.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +182,10 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				8E16264D91B6DBB753D7666F /* PrivacyInfo.xcprivacy in Resources */,
+				6BD4DF17CC3E403AA8F24A66 /* Roboto-Bold.ttf in Resources */,
+				634EA8E5AB64493EA8E87726 /* Roboto-Medium.ttf in Resources */,
+				F28A2D0F304149FE860512B0 /* Roboto-Regular.ttf in Resources */,
+				93144EE06FF0418990757997 /* Roboto-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
