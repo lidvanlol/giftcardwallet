@@ -15,7 +15,11 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, onBackPress, rightAction }) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={onBackPress} style={styles.iconContainer} testID="back-button">
+      <TouchableOpacity
+        onPress={onBackPress}
+        style={styles.iconContainer}
+        testID="back-button"
+      >
         <Icon name="keyboard-backspace" size={24} color="#fff" />
       </TouchableOpacity>
 

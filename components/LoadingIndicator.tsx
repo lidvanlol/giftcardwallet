@@ -5,7 +5,11 @@ import { Theme } from '../theme/theme';
 const LoadingIndicator = () => {
   return (
     <View style={styles.container}>
-      <ActivityIndicator size="large" color={Theme.colors.primary} testID="loading-indicator" />
+      <ActivityIndicator
+        size="large"
+        color={Theme.colors.primary}
+        testID="loading-indicator"
+      />
     </View>
   );
 };

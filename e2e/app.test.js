@@ -17,7 +17,9 @@ describe('Gift Card Wallet App', () => {
 
     it('should show empty state when no cards exist', async () => {
       await expect(element(by.text('No gift cards yet'))).toBeVisible();
-      await expect(element(by.text('Tap the + button to add your first gift card'))).toBeVisible();
+      await expect(
+        element(by.text('Tap the + button to add your first gift card')),
+      ).toBeVisible();
     });
 
     it('should navigate to add card screen when + button is pressed', async () => {
@@ -45,7 +47,7 @@ describe('Gift Card Wallet App', () => {
 
       // Should navigate back to cards list
       await expect(element(by.text('My Gift Cards'))).toBeVisible();
-      
+
       // Should show the new card
       await expect(element(by.text('Starbucks'))).toBeVisible();
       await expect(element(by.text('$50.00'))).toBeVisible();
@@ -63,9 +65,9 @@ describe('Gift Card Wallet App', () => {
     it('should show validation error for invalid amount', async () => {
       await element(by.id('brand-input')).typeText('Test Brand');
       await element(by.id('amount-input')).typeText('invalid');
-      
+
       await element(by.id('submit-button')).tap();
-      
+
       await expect(element(by.text('Amount must be a number'))).toBeVisible();
     });
 
@@ -93,7 +95,7 @@ describe('Gift Card Wallet App', () => {
 
     it('should navigate to card details when card is tapped', async () => {
       await element(by.id('card-item-Amazon')).tap();
-      
+
       await expect(element(by.text('Card Details'))).toBeVisible();
       await expect(element(by.text('Amazon'))).toBeVisible();
       await expect(element(by.text('$100.00'))).toBeVisible();
@@ -102,7 +104,7 @@ describe('Gift Card Wallet App', () => {
 
     it('should show edit and delete options in card details', async () => {
       await element(by.id('card-item-Amazon')).tap();
-      
+
       await expect(element(by.text('Edit'))).toBeVisible();
       await expect(element(by.text('Delete'))).toBeVisible();
     });
@@ -116,25 +118,25 @@ describe('Gift Card Wallet App', () => {
       await element(by.id('amount-input')).typeText('75');
       await element(by.id('last-four-digits-input')).typeText('9999');
       await element(by.id('submit-button')).tap();
-      
+
       // Navigate to card details
       await element(by.id('card-item-Target')).tap();
     });
 
     it('should edit a gift card successfully', async () => {
       await element(by.text('Edit')).tap();
-      
+
       // Should be on edit screen
       await expect(element(by.text('Edit Card'))).toBeVisible();
-      
+
       // Update the card
       await element(by.id('brand-input')).clearText();
       await element(by.id('brand-input')).typeText('Target Updated');
       await element(by.id('amount-input')).clearText();
       await element(by.id('amount-input')).typeText('150');
-      
+
       await element(by.id('submit-button')).tap();
-      
+
       // Should navigate back to card details
       await expect(element(by.text('Card Details'))).toBeVisible();
       await expect(element(by.text('Target Updated'))).toBeVisible();
@@ -144,7 +146,7 @@ describe('Gift Card Wallet App', () => {
     it('should go back to card details when cancel is pressed', async () => {
       await element(by.text('Edit')).tap();
       await element(by.id('back-button')).tap();
-      
+
       await expect(element(by.text('Card Details'))).toBeVisible();
     });
   });
@@ -157,34 +159,36 @@ describe('Gift Card Wallet App', () => {
       await element(by.id('amount-input')).typeText('25');
       await element(by.id('last-four-digits-input')).typeText('1111');
       await element(by.id('submit-button')).tap();
-      
+
       // Navigate to card details
       await element(by.id('card-item-Walmart')).tap();
     });
 
     it('should delete a gift card successfully', async () => {
       await element(by.text('Delete')).tap();
-      
+
       // Should show confirmation dialog
       await expect(element(by.text('Delete Card'))).toBeVisible();
-      await expect(element(by.text('Are you sure you want to delete this card?'))).toBeVisible();
-      
+      await expect(
+        element(by.text('Are you sure you want to delete this card?')),
+      ).toBeVisible();
+
       // Confirm deletion
       await element(by.text('Delete')).tap();
-      
+
       // Should navigate back to cards list
       await expect(element(by.text('My Gift Cards'))).toBeVisible();
-      
+
       // Card should be removed
       await expect(element(by.text('Walmart'))).not.toBeVisible();
     });
 
     it('should cancel deletion when cancel is pressed', async () => {
       await element(by.text('Delete')).tap();
-      
+
       // Cancel deletion
       await element(by.text('Cancel')).tap();
-      
+
       // Should stay on card details
       await expect(element(by.text('Card Details'))).toBeVisible();
       await expect(element(by.text('Walmart'))).toBeVisible();
@@ -198,10 +202,10 @@ describe('Gift Card Wallet App', () => {
       await element(by.id('brand-input')).typeText('Test Card');
       await element(by.id('amount-input')).typeText('10');
       await element(by.id('submit-button')).tap();
-      
+
       // Pull to refresh
       await element(by.id('cards-list')).scrollTo('top');
-      
+
       // Should still show the card after refresh
       await expect(element(by.text('Test Card'))).toBeVisible();
     });
@@ -213,4 +217,4 @@ describe('Gift Card Wallet App', () => {
       await expect(element(by.id('network-banner'))).toBeVisible();
     });
   });
-}); 
+});

@@ -9,7 +9,10 @@ const NetworkBanner = () => {
   if (isOnline) return null;
 
   return (
-    <View style={[styles.banner, { backgroundColor: Theme.colors.error }]} testID="network-banner">
+    <View
+      style={[styles.banner, { backgroundColor: Theme.colors.error }]}
+      testID="network-banner"
+    >
       <Text style={styles.text}>No internet connection</Text>
     </View>
   );

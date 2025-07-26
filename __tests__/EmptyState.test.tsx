@@ -19,9 +19,11 @@ describe('EmptyState', () => {
 
   test('renders with default props', () => {
     const { getByText } = render(<EmptyState />);
-    
+
     expect(getByText('No gift cards yet')).toBeTruthy();
-    expect(getByText('Tap the + button to add your first gift card')).toBeTruthy();
+    expect(
+      getByText('Tap the + button to add your first gift card'),
+    ).toBeTruthy();
     expect(getByText('Add Gift Card')).toBeTruthy();
   });
 
@@ -33,17 +35,17 @@ describe('EmptyState', () => {
     };
 
     const { getByText } = render(<EmptyState {...customProps} />);
-    
+
     expect(getByText('No items found')).toBeTruthy();
     expect(getByText('Try adding some items')).toBeTruthy();
   });
 
   test('navigates to AddCard when button is pressed', () => {
     const { getByText } = render(<EmptyState />);
-    
+
     const addButton = getByText('Add Gift Card');
     fireEvent.press(addButton);
-    
+
     expect(mockNavigate).toHaveBeenCalledWith('AddCard');
   });
 
@@ -51,19 +53,19 @@ describe('EmptyState', () => {
     const customOnPress = jest.fn();
     // Reset the mock before rendering to clear any initialization calls
     mockNavigate.mockClear();
-    
+
     const { getByText } = render(<EmptyState onPress={customOnPress} />);
-    
+
     const addButton = getByText('Add Gift Card');
     fireEvent.press(addButton);
-    
+
     expect(customOnPress).toHaveBeenCalled();
     expect(mockNavigate).not.toHaveBeenCalled();
   });
 
   test('renders with custom icon', () => {
     const { getByText } = render(<EmptyState iconName="wallet" />);
-    
+
     expect(getByText('No gift cards yet')).toBeTruthy();
   });
-}); 
+});

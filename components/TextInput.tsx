@@ -11,7 +11,7 @@ interface TextInputProps {
   error?: string;
   icon?: string;
   [key: string]: any;
-  testId?:string;
+  testId?: string;
 }
 
 const TextInput = ({

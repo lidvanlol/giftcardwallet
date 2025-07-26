@@ -1,4 +1,9 @@
-import cardsReducer, { addCard, updateCard, removeCard, setCards } from '../redux/slices/cardsSlice';
+import cardsReducer, {
+  addCard,
+  updateCard,
+  removeCard,
+  setCards,
+} from '../redux/slices/cardsSlice';
 import { GiftCard } from '../types';
 
 describe('Cards Slice', () => {

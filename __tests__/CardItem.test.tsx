@@ -27,7 +27,7 @@ describe('CardItem', () => {
 
   test('renders card information correctly', () => {
     const { getByText } = render(<CardItem card={mockCard} />);
-    
+
     expect(getByText('Amazon')).toBeTruthy();
     expect(getByText('$50.00')).toBeTruthy();
     expect(getByText('Exp: Dec 31, 2024')).toBeTruthy();
@@ -35,10 +35,10 @@ describe('CardItem', () => {
 
   test('navigates to card detail when pressed', () => {
     const { getByTestId } = render(<CardItem card={mockCard} />);
-    
+
     const cardItem = getByTestId('card-item-Amazon');
     fireEvent.press(cardItem);
-    
+
     expect(mockNavigate).toHaveBeenCalledWith('CardDetail', { cardId: '1' });
   });
 
@@ -53,7 +53,7 @@ describe('CardItem', () => {
     };
 
     const { getByText } = render(<CardItem card={differentCard} />);
-    
+
     expect(getByText('Starbucks')).toBeTruthy();
     expect(getByText('$25.50')).toBeTruthy();
     expect(getByText('Exp: Jun 15, 2024')).toBeTruthy();
@@ -66,8 +66,8 @@ describe('CardItem', () => {
     };
 
     const { getByText } = render(<CardItem card={cardWithoutDigits} />);
-    
+
     expect(getByText('Amazon')).toBeTruthy();
     expect(getByText('$50.00')).toBeTruthy();
   });
-}); 
+});

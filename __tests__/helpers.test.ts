@@ -41,4 +41,4 @@ describe('Helper Functions', () => {
       expect(formatDate('invalid-date')).toBe('Invalid Date');
     });
   });
-}); 
+});

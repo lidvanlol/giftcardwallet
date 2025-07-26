@@ -5,11 +5,11 @@ module.exports = {
     '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(jest-)?@?react-native|react-native|@react-native-community|@react-navigation)|react-redux'
+    'node_modules/(?!(jest-)?@?react-native|react-native|@react-native-community|@react-navigation)|react-redux',
   ],
   setupFilesAfterEnv: [
     '@testing-library/jest-native/extend-expect',
-    './jest.setup.js'
+    './jest.setup.js',
   ],
   testPathIgnorePatterns: ['/node_modules/', '/e2e/'],
   collectCoverageFrom: [
@@ -18,12 +18,12 @@ module.exports = {
     '!**/__mocks__/**',
     '!**/types/**',
   ],
-  "coverageThreshold": {
-    "global": {
-      "branches": 80,
-      "functions": 80,
-      "lines": 80,
-      "statements": 80
-    }
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80,
+    },
   },
 };

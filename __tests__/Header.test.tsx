@@ -15,20 +15,20 @@ describe('Header', () => {
 
   test('renders title correctly', () => {
     const { getByText } = render(
-      <Header title="Test Header" onBackPress={mockOnBackPress} />
+      <Header title="Test Header" onBackPress={mockOnBackPress} />,
     );
-    
+
     expect(getByText('Test Header')).toBeTruthy();
   });
 
   test('calls onBackPress when back button is pressed', () => {
     const { getByTestId } = render(
-      <Header title="Test Header" onBackPress={mockOnBackPress} />
+      <Header title="Test Header" onBackPress={mockOnBackPress} />,
     );
-    
+
     const backButton = getByTestId('back-button');
     fireEvent.press(backButton);
-    
+
     expect(mockOnBackPress).toHaveBeenCalled();
   });
 
@@ -38,9 +38,9 @@ describe('Header', () => {
         title="Test Header"
         onBackPress={mockOnBackPress}
         rightAction={mockRightAction}
-      />
+      />,
     );
-    
+
     const editButton = getByTestId('edit-button');
     expect(editButton).toBeTruthy();
   });
@@ -51,29 +51,29 @@ describe('Header', () => {
         title="Test Header"
         onBackPress={mockOnBackPress}
         rightAction={mockRightAction}
-      />
+      />,
     );
-    
+
     const editButton = getByTestId('edit-button');
     fireEvent.press(editButton);
-    
+
     expect(mockRightAction.onPress).toHaveBeenCalled();
   });
 
   test('renders without right action', () => {
     const { getByText, queryByTestId } = render(
-      <Header title="Test Header" onBackPress={mockOnBackPress} />
+      <Header title="Test Header" onBackPress={mockOnBackPress} />,
     );
-    
+
     expect(getByText('Test Header')).toBeTruthy();
     expect(queryByTestId('edit-button')).toBeNull();
   });
 
   test('renders with different title', () => {
     const { getByText } = render(
-      <Header title="Different Title" onBackPress={mockOnBackPress} />
+      <Header title="Different Title" onBackPress={mockOnBackPress} />,
     );
-    
+
     expect(getByText('Different Title')).toBeTruthy();
   });
-}); 
+});

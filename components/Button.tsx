@@ -17,7 +17,7 @@ interface ButtonProps {
   textStyle?: TextStyle;
   style?: StyleProp<ViewStyle>;
   iconStyle?: TextStyle;
-  testId?:string;
+  testId?: string;
 }
 
 const Button = ({
@@ -28,7 +28,7 @@ const Button = ({
   icon,
   iconStyle,
   disabled = false,
-  testId
+  testId,
 }: ButtonProps) => {
   const isIconOnly = !!icon && !title;
   return (
@@ -38,7 +38,6 @@ const Button = ({
       disabled={disabled}
       activeOpacity={0.7}
       testID={testId}
-      
     >
       <View
         style={[styles.buttonContent, isIconOnly && styles.iconOnlyContent]}

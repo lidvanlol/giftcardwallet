@@ -11,9 +11,9 @@ describe('TextInput', () => {
         placeholder="Enter your email"
         value=""
         onChangeText={onChangeText}
-      />
+      />,
     );
-    
+
     expect(getByText('Email')).toBeTruthy();
     expect(getByPlaceholderText('Enter your email')).toBeTruthy();
   });
@@ -26,9 +26,9 @@ describe('TextInput', () => {
         placeholder="Enter your name"
         value=""
         onChangeText={onChangeText}
-      />
+      />,
     );
-    
+
     const input = getByPlaceholderText('Enter your name');
     fireEvent.changeText(input, 'John Doe');
     expect(onChangeText).toHaveBeenCalledWith('John Doe');
@@ -43,9 +43,9 @@ describe('TextInput', () => {
         value=""
         onChangeText={onChangeText}
         error="Email is required"
-      />
+      />,
     );
-    
+
     expect(getByText('Email is required')).toBeTruthy();
   });
 
@@ -59,9 +59,9 @@ describe('TextInput', () => {
         onChangeText={onChangeText}
         icon="magnify"
         testId="search-input"
-      />
+      />,
     );
-    
+
     expect(getByTestId('search-input')).toBeTruthy();
   });
 
@@ -75,9 +75,9 @@ describe('TextInput', () => {
         onChangeText={onChangeText}
         error="Invalid email"
         testId="email-input"
-      />
+      />,
     );
-    
+
     const input = getByTestId('email-input');
     expect(input).toBeTruthy();
   });
@@ -90,9 +90,9 @@ describe('TextInput', () => {
         placeholder="Enter your name"
         value="John Doe"
         onChangeText={onChangeText}
-      />
+      />,
     );
-    
+
     expect(getByDisplayValue('John Doe')).toBeTruthy();
   });
-}); 
+});

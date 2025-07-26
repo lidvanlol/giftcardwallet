@@ -6,7 +6,7 @@ const waitForElement = async (testId, timeout = 5000) => {
 };
 
 // Helper function to tap element by test ID
-const tapElement = async (testId) => {
+const tapElement = async testId => {
   await element(by.id(testId)).tap();
 };
 
@@ -27,7 +27,7 @@ const scrollToElement = async (testId, direction = 'down') => {
 };
 
 // Helper function to check if element exists
-const elementExists = async (testId) => {
+const elementExists = async testId => {
   try {
     await expect(element(by.id(testId))).toBeVisible();
     return true;
@@ -37,7 +37,12 @@ const elementExists = async (testId) => {
 };
 
 // Helper function to add a test card
-const addTestCard = async (brand, amount, lastFourDigits = '1234', notes = '') => {
+const addTestCard = async (
+  brand,
+  amount,
+  lastFourDigits = '1234',
+  notes = '',
+) => {
   await tapElement('add-card-button');
   await typeText('brand-input', brand);
   await typeText('amount-input', amount);
@@ -64,4 +69,4 @@ module.exports = {
   elementExists,
   addTestCard,
   deleteAllCards,
-}; 
+};

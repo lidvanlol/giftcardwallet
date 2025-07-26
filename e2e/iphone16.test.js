@@ -23,7 +23,7 @@ describe('iPhone 16 Pro Tests', () => {
   it('should navigate to add card screen', async () => {
     // Tap the add button
     await element(by.id('add-card-button')).tap();
-    
+
     // Check if we're on the add card screen
     await expect(element(by.text('Add New Card'))).toBeVisible();
   });
@@ -31,8 +31,8 @@ describe('iPhone 16 Pro Tests', () => {
   it('should go back to main screen', async () => {
     // Tap back button
     await element(by.id('back-button')).tap();
-    
+
     // Check if we're back on main screen
     await expect(element(by.text('My Gift Cards'))).toBeVisible();
   });
-}); 
+});

@@ -108,7 +108,7 @@ const AddCardForm = ({
         onChangeText={text => handleChange('brand', text)}
         placeholderTextColor="#999"
         error={errors.brand}
-        testId='brand-input'
+        testId="brand-input"
       />
 
       <TextInput
@@ -183,7 +183,12 @@ const AddCardForm = ({
                 minimumDate={new Date()}
                 accentColor="#6200ee"
               />
-              <Button title="Done" style={styles.submitButton} onPress={() => setShowDatePicker(false)} textStyle={styles.submitButtonText}/>
+              <Button
+                title="Done"
+                style={styles.submitButton}
+                onPress={() => setShowDatePicker(false)}
+                textStyle={styles.submitButtonText}
+              />
             </View>
           </View>
         </Modal>
